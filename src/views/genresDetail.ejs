@@ -15,6 +15,12 @@
     <br>
     <p>NAME: <%= genre.name %> </p>
     <p>RANKIG: <%= genre.ranking %> </p>
-
+    <br>
+    <h4>Peliculas</h4>
+    <ul>
+        <% genre.movies.forEach(movie => { %>
+         <li><a href="/movies/detail/<%= movie.id %>"><%= movie.title %></a></li>
+        <% }) %>
+    </ul>
 </body>
 </html>
